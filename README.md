@@ -11,7 +11,7 @@
   <img src="https://img.shields.io/badge/Claude-Skill-blueviolet" alt="Claude Skill" />
   <img src="https://img.shields.io/badge/dependencies-zero-brightgreen" alt="Zero Dependencies" />
   <img src="https://img.shields.io/badge/EU%20AI%20Act-ready-orange" alt="EU AI Act Ready" />
-  <a href="https://github.com/openclaw/clawhub"><img src="https://img.shields.io/badge/ClawHub-published-ff69b4" alt="ClawHub Published" /></a>
+  <a href="https://github.com/openclaw/clawhub"><img src="https://img.shields.io/badge/ClawHub-coming%20soon-lightgrey" alt="ClawHub Coming Soon" /></a>
 </p>
 
 <p align="center">
@@ -79,9 +79,9 @@ That's it. Kevin will automatically activate whenever you ask Claude a legal que
 
 Kevin will appear in your available skills and activate automatically when you ask legal questions.
 
-### ClawHub (OpenClaw)
+### ClawHub (OpenClaw) — Coming Soon
 
-If you use [OpenClaw](https://docs.openclaw.ai/tools/skills), Kevin is published on [ClawHub](https://github.com/openclaw/clawhub):
+[ClawHub](https://github.com/openclaw/clawhub) publishing is on the roadmap. Once live, you'll be able to install with:
 
 ```bash
 clawhub install kevin
