@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="assets/kevin.png" alt="Kevin" width="200" />
+  <img src="assets/kevin.png" alt="Kevin" width="" />
 </p>
 
 <h1 align="center">Kevin</h1>
-<p align="center"><strong>Your AI legal sidekick for startups</strong></p>
+<p align="center"><strong>Your AI legal sidekick</strong></p>
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License" /></a>
