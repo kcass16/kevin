@@ -1,6 +1,6 @@
 # Kevin — Repo Guide for Claude
 
-This is the GitHub repository for **Kevin**, an open-source Claude skill that serves as an AI legal sidekick for AI startups. This file tells you how the repo is organized and how to make changes correctly.
+This is the GitHub repository for **Kevin**, an open-source agent skill that serves as an AI legal sidekick for AI startups. This file tells you how the repo is organized and how to make changes correctly.
 
 ## Repo Structure
 
@@ -10,7 +10,6 @@ kevin/
 ├── references/
 │   ├── knowledge-base.md             # Deep legal knowledge base (~875 lines)
 │   └── workflows.md                  # 10 structured legal workflows (~1,536 lines)
-├── kevin.skill                       # Packaged skill file for one-command install
 ├── assets/                           # Logo, social preview card, screenshots
 ├── README.md                         # Public-facing documentation
 ├── CONTRIBUTING.md                   # Contributor guidelines and style guide
@@ -30,9 +29,9 @@ kevin/
 
 ## How the Skill Works
 
-Kevin is a Claude Code skill. Claude loads it in three layers:
+Kevin is an agent skill that follows the open [Agent Skills](https://github.com/vercel-labs/skills) standard. Agents load it in three layers:
 
-1. **Always in context:** The YAML frontmatter in SKILL.md (`name` and `description`, ~100 words). This is what tells Claude when to activate Kevin.
+1. **Always in context:** The YAML frontmatter in SKILL.md (`name` and `description`, ~100 words). This is what tells the agent when to activate Kevin.
 2. **On trigger:** The full SKILL.md body (~250 lines). This gives Kevin his personality, workflow selection table, contract checklist, regulatory quick references, model clauses, and threat model summary.
 3. **On demand:** The reference files (`references/workflows.md` and `references/knowledge-base.md`) are read only when Kevin needs deeper detail for a specific workflow or question.
 
@@ -111,8 +110,8 @@ Update `CHANGELOG.md` with every change. Follow [Keep a Changelog](https://keepa
 - Remove or weaken the legal disclaimer ("I'm Kevin, your AI legal sidekick — not a licensed attorney...")
 - Fabricate legal citations, case law, or regulatory requirements
 - Add advice designed to help users evade regulations
-- Change the `name` field in SKILL.md frontmatter without updating the `kevin.skill` package and README
-- Add external dependencies (API keys, binaries, network calls) — Kevin works entirely within Claude's context
+- Change the `name` field in SKILL.md frontmatter without updating the README
+- Add external dependencies (API keys, binaries, network calls) — Kevin works entirely within the agent's context
 
 ## Contact
 
