@@ -1,22 +1,21 @@
 <p align="center">
-  <img src="assets/kevin.png" alt="Kevin" width="" />
+  <img src="assets/kevin.png" alt="Kevin" width="200" />
 </p>
 
 <h1 align="center">Kevin</h1>
-<p align="center"><strong>Your AI legal sidekick</strong></p>
+<p align="center"><strong>Your AI legal sidekick for startups</strong></p>
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License" /></a>
   <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-1.0.0-green.svg" alt="Version 1.0.0" /></a>
-  <img src="https://img.shields.io/badge/Claude-Skill-blueviolet" alt="Claude Skill" />
+  <a href="https://skills.sh"><img src="https://img.shields.io/badge/Agent_Skill-npx_skills-blueviolet" alt="Agent Skill" /></a>
   <img src="https://img.shields.io/badge/dependencies-zero-brightgreen" alt="Zero Dependencies" />
   <img src="https://img.shields.io/badge/EU%20AI%20Act-ready-orange" alt="EU AI Act Ready" />
-  <a href="https://github.com/openclaw/clawhub"><img src="https://img.shields.io/badge/ClawHub-coming%20soon-lightgrey" alt="ClawHub Coming Soon" /></a>
 </p>
 
 <p align="center">
-  A Claude skill that handles contracts, compliance, privacy, IP, and security for AI startups.<br/>
-  10 structured workflows. 2,400+ lines of legal knowledge. One command to install.
+  An agent skill that handles contracts, compliance, privacy, IP, and security for AI startups.<br/>
+  Works with Claude Code, Cursor, Codex, OpenCode, and <a href="https://skills.sh">39+ more agents</a>. One command to install.
 </p>
 
 ---
@@ -61,30 +60,25 @@ Kevin tracks and applies:
 
 ## Installation
 
-### Claude Code (CLI)
+### npx skills (recommended)
 
-Download `kevin.skill` from the [Releases](../../releases) page, then:
+Kevin follows the open [Agent Skills](https://github.com/vercel-labs/skills) standard. Install it to any supported agent with one command:
 
 ```bash
-claude install-skill kevin.skill
+npx skills add kcass16/kevin
 ```
 
-That's it. Kevin will automatically activate whenever you ask Claude a legal question about AI.
-
-### Claude Cowork (Desktop)
-
-1. Download the `kevin.skill` file from the [Releases](../../releases) page
-2. Open Claude Desktop → Cowork mode
-3. Drop the `kevin.skill` file into the chat, or install it from the skill browser
-
-Kevin will appear in your available skills and activate automatically when you ask legal questions.
-
-### ClawHub (OpenClaw) — Coming Soon
-
-[ClawHub](https://github.com/openclaw/clawhub) publishing is on the roadmap. Once live, you'll be able to install with:
+This works with **Claude Code, Cursor, Codex, OpenCode, Windsurf, Cline, Gemini CLI, GitHub Copilot**, and [39+ more agents](https://skills.sh). The CLI auto-detects which agents you have installed.
 
 ```bash
-clawhub install kevin
+# Install to specific agents
+npx skills add kcass16/kevin -a claude-code -a cursor
+
+# Install globally (available across all projects)
+npx skills add kcass16/kevin -g
+
+# List available skills before installing
+npx skills add kcass16/kevin --list
 ```
 
 ### Manual install
@@ -93,7 +87,7 @@ clawhub install kevin
 # Clone the repo
 git clone https://github.com/kcass16/kevin.git
 
-# Copy into your project's skills directory
+# Copy into your agent's skills directory (example: Claude Code)
 cp -r kevin/ /path/to/your-project/.claude/skills/kevin
 ```
 
@@ -106,7 +100,7 @@ git submodule add https://github.com/kcass16/kevin.git .claude/skills/kevin
 
 ## Usage Examples
 
-Once installed, just talk to Claude naturally. Kevin activates automatically.
+Once installed, just talk to your agent naturally. Kevin activates automatically.
 
 ### Review a vendor contract
 
@@ -178,15 +172,14 @@ kevin/
 ├── CONTRIBUTING.md                       # How to contribute
 ├── CHANGELOG.md                          # Version history
 ├── CLAUDE.md                             # Repo guide for Claude (how to make changes)
-├── LICENSE                               # MIT License
-└── kevin.skill                           # Packaged skill for one-command installation
+└── LICENSE                               # MIT License
 ```
 
 ### How the skill loads
 
-Claude uses a progressive disclosure model for skills:
+Agents use a progressive disclosure model for skills:
 
-1. **Always in context:** The skill `name` and `description` from SKILL.md frontmatter (~100 words). This is what tells Claude when to activate Kevin.
+1. **Always in context:** The skill `name` and `description` from SKILL.md frontmatter (~100 words). This is what tells the agent when to activate Kevin.
 2. **On trigger:** The full SKILL.md body (~300 lines). This gives Kevin his personality, workflow selection table, contract checklist, regulatory quick references, model clauses, and threat model summary.
 3. **On demand:** The reference files are read only when Kevin needs deeper detail for a specific workflow or question. This keeps context lean for simple questions while making the full knowledge base available for heavy-duty work.
 
@@ -236,9 +229,9 @@ To add a new workflow:
 
 ## Requirements
 
-- **Claude Code** (CLI), **Claude Cowork** (Desktop), or any Claude-powered environment that supports skills
+- Any AI coding agent that supports the [Agent Skills](https://github.com/vercel-labs/skills) standard (Claude Code, Cursor, Codex, OpenCode, Windsurf, and 39+ more)
 - No external dependencies, API keys, or databases required
-- Kevin works entirely within Claude's context — no network calls, no data leaves the conversation
+- Kevin works entirely within your agent's context — no network calls, no data leaves the conversation
 
 ## Contributing
 
