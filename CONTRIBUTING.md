@@ -16,19 +16,19 @@ Thanks for wanting to make Kevin smarter. AI law is moving fast and Kevin needs 
 
 ## How to Contribute
 
-### Using Claude (recommended for legal professionals)
+### Using an AI agent (recommended for legal professionals)
 
-This repo includes a `CLAUDE.md` file that teaches Claude the repo structure, style rules, and exactly which files to update for any type of change. You don't need to know the codebase — just describe the legal change and Claude handles the rest.
+This repo includes a `CLAUDE.md` file that teaches AI agents the repo structure, style rules, and exactly which files to update for any type of change. You don't need to know the codebase — just describe the legal change and the agent handles the rest.
 
 1. **Fork** the repository and clone it locally
-2. Open the repo in **Claude Code** or **Claude Cowork**
-3. Tell Claude what to change in plain English, for example:
+2. Open the repo in **Claude Code**, **Cursor**, **Codex**, **OpenCode**, or any [supported agent](https://skills.sh)
+3. Tell the agent what to change in plain English, for example:
    - *"Add Singapore PDPA coverage to Kevin's knowledge base"*
    - *"Update the EU AI Act high-risk deadline to reflect the Digital Omnibus extension"*
    - *"Add a new workflow for AI model cards"*
    - *"The indemnification clause in Section 4 should also cover algorithmic discrimination claims"*
-4. Claude will read `CLAUDE.md`, identify the right files, apply the style guide, and make the changes
-5. Review Claude's changes, test by running a few prompts, and submit a PR
+4. The agent will read `CLAUDE.md`, identify the right files, apply the style guide, and make the changes
+5. Review the changes, test by running a few prompts, and submit a PR
 
 ### Manual contribution
 
