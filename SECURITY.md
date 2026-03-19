@@ -2,7 +2,7 @@
 
 ## Overview
 
-Kevin is a Claude Code skill that runs entirely within Claude's context window. It has no external dependencies, no API keys, no network calls, and no persistent storage. No data leaves the conversation.
+Kevin is an agent skill that runs entirely within the host agent's context window. It has no external dependencies, no API keys, no network calls, and no persistent storage. No data leaves the conversation.
 
 That said, Kevin deals with sensitive legal content, so we take security seriously.
 
@@ -31,14 +31,13 @@ We will acknowledge receipt within 48 hours and provide an initial assessment wi
 
 Since Kevin is a skill file (markdown-based prompts and knowledge), the attack surface is limited to:
 
-- **Prompt injection via skill content:** Malicious modifications to SKILL.md or reference files that could cause Claude to behave unexpectedly
+- **Prompt injection via skill content:** Malicious modifications to SKILL.md or reference files that could cause the host agent to behave unexpectedly
 - **Incorrect legal guidance:** Errors in regulatory citations, contract clauses, or compliance advice that could lead users to make harmful legal decisions
 - **Outdated regulatory information:** Laws change; if Kevin's knowledge base references superseded regulations, that's a security-adjacent concern
 
 ## What Is NOT in Scope
 
-- Vulnerabilities in Claude itself (report to [Anthropic](https://www.anthropic.com/responsible-disclosure))
-- Vulnerabilities in Claude Code (report to [Anthropic](https://www.anthropic.com/responsible-disclosure))
+- Vulnerabilities in the host AI agent (e.g., Claude, Cursor, Codex) — report to the respective vendor
 - General legal disagreements about Kevin's guidance (open a regular issue or discussion instead)
 
 ## Responsible Disclosure
